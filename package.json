@@ -2,7 +2,7 @@
   "name": "counter-list-app",
   "version": "0.1.0",
   "private": true,
-  "description": "A web application for creating lists of integer counters",
+  "description": "A web application for creating a list of integer counters",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
