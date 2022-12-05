@@ -1,6 +1,6 @@
 # Counter List App
 
-A web application for creating lists of integer counters.
+A web application for creating a list of integer counters.
 
 > This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
