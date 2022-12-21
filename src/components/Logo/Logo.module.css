@@ -1,0 +1,10 @@
+.root {
+  height: 32px;
+  fill: white;
+}
+
+@media (max-width: 350px) {
+  .root {
+    height: 24px;
+  }
+}

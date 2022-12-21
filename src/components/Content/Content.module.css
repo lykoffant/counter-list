@@ -1,0 +1,12 @@
+.root {
+  padding: 16px;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.add-counter-form {
+  margin-bottom: 16px;
+}

@@ -1,0 +1,18 @@
+.root {
+  min-height: 64px;
+  padding: 16px;
+
+  color: white;
+
+  background-color: #388e3c;
+  box-shadow: 0 5px 5px -5px rgb(34 60 80 / 60%);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1024px;
+  margin: 0 auto;
+}
