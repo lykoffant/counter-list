@@ -1,5 +1,5 @@
 {
-  "name": "counter-list-app",
+  "name": "counter-list",
   "version": "0.1.0",
   "private": true,
   "description": "A web application for creating a list of integer counters",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lykoffant/counter-list-app.git"
+    "url": "git+https://github.com/lykoffant/counter-list.git"
   },
   "keywords": [
     "react",
@@ -26,7 +26,7 @@
   ],
   "author": "Anton Lykov",
   "bugs": {
-    "url": "https://github.com/lykoffant/counter-list-app/issues"
+    "url": "https://github.com/lykoffant/counter-list/issues"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

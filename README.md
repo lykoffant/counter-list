@@ -1,4 +1,4 @@
-# Counter List App
+# Counter List
 
 A web application for creating a list of integer counters.
 
