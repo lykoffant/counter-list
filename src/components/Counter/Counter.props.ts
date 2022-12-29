@@ -1,11 +1,11 @@
 import { DetailedHTMLProps, LiHTMLAttributes } from 'react';
 
-import { ICounter } from '../../models';
+import { CounterId, ICounter } from '../../models';
 
 export interface ICounterProps
   extends DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement> {
   counter: ICounter;
-  deleteCounter: (id: number) => void;
-  incCounterValue: (id: number) => void;
-  decCounterValue: (id: number) => void;
+  deleteCounter: (id: CounterId) => void;
+  incCounterValue: (id: CounterId) => void;
+  decCounterValue: (id: CounterId) => void;
 }

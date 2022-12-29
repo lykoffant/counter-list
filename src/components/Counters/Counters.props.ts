@@ -1,6 +1,6 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
-import { CounterList } from '../../models';
+import { CounterId, CounterList } from '../../models';
 
 export interface ICountersProps
   extends DetailedHTMLProps<
@@ -8,7 +8,7 @@ export interface ICountersProps
     HTMLUListElement
   > {
   counters: CounterList;
-  deleteCounter: (id: number) => void;
-  incCounterValue: (id: number) => void;
-  decCounterValue: (id: number) => void;
+  deleteCounter: (id: CounterId) => void;
+  incCounterValue: (id: CounterId) => void;
+  decCounterValue: (id: CounterId) => void;
 }

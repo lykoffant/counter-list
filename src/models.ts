@@ -1,5 +1,7 @@
+export type CounterId = number;
+
 export interface ICounter {
-  id: number;
+  id: CounterId;
   name: string;
   value: number;
 }
