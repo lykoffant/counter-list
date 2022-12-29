@@ -33,7 +33,7 @@
 .button {
   cursor: pointer;
 
-  padding: 4px 14px;
+  padding: 6px 14px;
 
   font-size: 20px;
   line-height: 100%;
@@ -45,7 +45,7 @@
 
 .button_trash {
   margin-right: 24px;
-  padding: 2px 12px;
+  padding: 4px 12px;
 
   color: #f9a825;
 
