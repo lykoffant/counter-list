@@ -66,7 +66,7 @@
   background-color: lightgray;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 450px) {
   .parent {
     flex-direction: column;
     align-items: stretch;
