@@ -6,9 +6,13 @@ import cn from 'classnames';
 import { FormEvent, useState } from 'react';
 
 import styles from './AddCounterForm.module.css';
-import { I_AddCounterForm } from './AddCounterForm.props';
+import { IAddCounterFormProps } from './AddCounterForm.props';
 
-function AddCounterForm({ className, addCounter, ...props }: I_AddCounterForm) {
+function AddCounterForm({
+  className,
+  addCounter,
+  ...props
+}: IAddCounterFormProps) {
   const [counterName, setCounterName] = useState<string>('');
 
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {

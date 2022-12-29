@@ -5,7 +5,7 @@ import cn from 'classnames';
 
 import styles from './Counter.module.css';
 
-import { I_CounterProps } from './Counter.props';
+import { ICounterProps } from './Counter.props';
 
 function Counter({
   className,
@@ -14,7 +14,7 @@ function Counter({
   incCounterValue,
   decCounterValue,
   ...props
-}: I_CounterProps) {
+}: ICounterProps) {
   return (
     <li className={cn(className, styles['parent'])} {...props}>
       <span className={styles['name']}>{counter.name}</span>

@@ -2,7 +2,7 @@ import cn from 'classnames';
 
 import styles from './Counters.module.css';
 
-import { I_CountersProps } from './Counters.props';
+import { ICountersProps } from './Counters.props';
 
 import { Counter } from '../Counter/Counter';
 
@@ -13,7 +13,7 @@ function Counters({
   incCounterValue,
   decCounterValue,
   ...props
-}: I_CountersProps) {
+}: ICountersProps) {
   return (
     <ul className={cn(className, styles['parent'])} {...props}>
       {counters.map((counter) => (

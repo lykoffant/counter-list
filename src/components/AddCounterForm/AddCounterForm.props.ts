@@ -1,11 +1,11 @@
 import { DetailedHTMLProps, FormHTMLAttributes } from 'react';
 
-import { I_Counter } from '../../interfaces/I_Counter';
+import { ICounter } from '../../models';
 
-export interface I_AddCounterForm
+export interface IAddCounterFormProps
   extends DetailedHTMLProps<
     FormHTMLAttributes<HTMLFormElement>,
     HTMLFormElement
   > {
-  addCounter: (counter: I_Counter) => void;
+  addCounter: (counter: ICounter) => void;
 }

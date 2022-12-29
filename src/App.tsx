@@ -4,13 +4,12 @@ import styles from './App.module.css';
 
 import { AddCounterForm, Counters } from './components';
 
-import { I_Counter } from './interfaces/I_Counter';
-import { T_Counters } from './types/T_Counters';
+import { ICounter, CounterList } from './models';
 
 function App() {
-  const [counters, setCounters] = useState<T_Counters>([]);
+  const [counters, setCounters] = useState<CounterList>([]);
 
-  const addCounter = (counter: I_Counter) =>
+  const addCounter = (counter: ICounter) =>
     setCounters((prevList) => [counter, ...prevList]);
 
   const deleteCounter = (counterId: number) =>
