@@ -9,6 +9,7 @@ import { Counter } from '../Counter/Counter';
 function Counters({
   className,
   counters,
+  deleteCounter,
   incCounterValue,
   decCounterValue,
   ...props
@@ -20,6 +21,7 @@ function Counters({
           key={counter.id}
           className={styles['counter']}
           counter={counter}
+          deleteCounter={deleteCounter}
           incCounterValue={incCounterValue}
           decCounterValue={decCounterValue}
         />

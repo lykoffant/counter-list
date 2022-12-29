@@ -8,6 +8,7 @@ export interface I_CountersProps
     HTMLUListElement
   > {
   counters: T_Counters;
+  deleteCounter: (id: number) => void;
   incCounterValue: (id: number) => void;
   decCounterValue: (id: number) => void;
 }

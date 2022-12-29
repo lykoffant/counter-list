@@ -1,4 +1,4 @@
-import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faMinus, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import cn from 'classnames';
@@ -10,6 +10,7 @@ import { I_CounterProps } from './Counter.props';
 function Counter({
   className,
   counter,
+  deleteCounter,
   incCounterValue,
   decCounterValue,
   ...props
@@ -19,6 +20,15 @@ function Counter({
       <span className={styles['name']}>{counter.name}</span>
 
       <div className={styles['actions']}>
+        <button
+          className={cn(styles['button'], styles['button_trash'])}
+          type='button'
+          aria-label='delete'
+          onClick={() => deleteCounter(counter.id)}
+        >
+          <FontAwesomeIcon icon={faTrash} />
+        </button>
+
         <button
           className={cn(styles['button'], styles['button_decrement'])}
           type='button'

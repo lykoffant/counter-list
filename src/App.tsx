@@ -13,6 +13,11 @@ function App() {
   const addCounter = (counter: I_Counter) =>
     setCounters((prevList) => [counter, ...prevList]);
 
+  const deleteCounter = (counterId: number) =>
+    setCounters((prevList) =>
+      prevList.filter((counter) => counter.id !== counterId),
+    );
+
   const incCounterValue = (id: number) => {
     setCounters((prevList) =>
       prevList.map((counter) =>
@@ -37,6 +42,7 @@ function App() {
         <Counters
           className={styles['list']}
           counters={counters}
+          deleteCounter={deleteCounter}
           incCounterValue={incCounterValue}
           decCounterValue={decCounterValue}
         />
