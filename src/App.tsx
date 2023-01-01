@@ -4,10 +4,10 @@ import styles from './App.module.css';
 
 import { AddCounterForm, Counters } from './components';
 
-import { ICounter, CounterList, CounterId } from './models';
+import { CounterId, ICounter } from './models/counter.models';
 
 function App() {
-  const [counters, setCounters] = useState<CounterList>([]);
+  const [counters, setCounters] = useState<ICounter[]>([]);
 
   const addCounter = (counter: ICounter) =>
     setCounters((prevList) => [counter, ...prevList]);

@@ -1,6 +1,6 @@
 import { DetailedHTMLProps, LiHTMLAttributes } from 'react';
 
-import { CounterId, ICounter } from '../../models';
+import { CounterId, ICounter } from '../../models/counter.models';
 
 export interface ICounterProps
   extends DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement> {

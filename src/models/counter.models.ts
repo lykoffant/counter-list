@@ -5,5 +5,3 @@ export interface ICounter {
   name: string;
   value: number;
 }
-
-export type CounterList = ICounter[];
