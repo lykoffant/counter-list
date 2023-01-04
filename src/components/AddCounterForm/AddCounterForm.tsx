@@ -20,7 +20,7 @@ function AddCounterForm({
 
     counterName &&
       addCounter({
-        id: new Date().valueOf(),
+        id: Date.now(),
         name: counterName,
         value: 0,
       });
