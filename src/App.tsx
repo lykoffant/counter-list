@@ -1,35 +1,17 @@
-import { useState } from 'react';
-
 import styles from './App.module.css';
 
 import { AddCounterForm, CounterList } from './components';
 
-import { ICounter } from './models/counter.models';
+import { useCounters } from './hooks/useCounters';
 
 function App() {
-  const [counters, setCounters] = useState<ICounter[]>([]);
-
-  const addCounter = (counter: ICounter) =>
-    setCounters((prevList) => [counter, ...prevList]);
-
-  const deleteCounter = (id: ICounter['id']) =>
-    setCounters((prevList) => prevList.filter((counter) => counter.id !== id));
-
-  const incCounterValue = (id: ICounter['id']) => {
-    setCounters((prevList) =>
-      prevList.map((counter) =>
-        counter.id === id ? { ...counter, value: counter.value + 1 } : counter,
-      ),
-    );
-  };
-
-  const decCounterValue = (id: ICounter['id']) => {
-    setCounters((prevList) =>
-      prevList.map((counter) =>
-        counter.id === id ? { ...counter, value: counter.value - 1 } : counter,
-      ),
-    );
-  };
+  const {
+    counters,
+    addCounter,
+    deleteCounter,
+    incCounterValue,
+    decCounterValue,
+  } = useCounters([]);
 
   return (
     <main className={styles['parent']}>
