@@ -4,7 +4,7 @@ import styles from './App.module.css';
 
 import { AddCounterForm, CounterList } from './components';
 
-import { CounterId, ICounter } from './models/counter.models';
+import { ICounter } from './models/counter.models';
 
 function App() {
   const [counters, setCounters] = useState<ICounter[]>([]);
@@ -12,12 +12,12 @@ function App() {
   const addCounter = (counter: ICounter) =>
     setCounters((prevList) => [counter, ...prevList]);
 
-  const deleteCounter = (counterId: CounterId) =>
+  const deleteCounter = (counterId: ICounter['id']) =>
     setCounters((prevList) =>
       prevList.filter((counter) => counter.id !== counterId),
     );
 
-  const incCounterValue = (id: CounterId) => {
+  const incCounterValue = (id: ICounter['id']) => {
     setCounters((prevList) =>
       prevList.map((counter) =>
         counter.id === id ? { ...counter, value: counter.value + 1 } : counter,
@@ -25,7 +25,7 @@ function App() {
     );
   };
 
-  const decCounterValue = (id: CounterId) => {
+  const decCounterValue = (id: ICounter['id']) => {
     setCounters((prevList) =>
       prevList.map((counter) =>
         counter.id === id ? { ...counter, value: counter.value - 1 } : counter,
