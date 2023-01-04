@@ -12,10 +12,8 @@ function App() {
   const addCounter = (counter: ICounter) =>
     setCounters((prevList) => [counter, ...prevList]);
 
-  const deleteCounter = (counterId: ICounter['id']) =>
-    setCounters((prevList) =>
-      prevList.filter((counter) => counter.id !== counterId),
-    );
+  const deleteCounter = (id: ICounter['id']) =>
+    setCounters((prevList) => prevList.filter((counter) => counter.id !== id));
 
   const incCounterValue = (id: ICounter['id']) => {
     setCounters((prevList) =>
