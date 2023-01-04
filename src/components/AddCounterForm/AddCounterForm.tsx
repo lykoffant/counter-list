@@ -18,7 +18,7 @@ function AddCounterForm({
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (counterName.length > 0) {
+    if (counterName.trim().length > 0) {
       addCounter(counterName);
       setCounterName('');
     }
@@ -43,7 +43,7 @@ function AddCounterForm({
         className={styles['button']}
         type='submit'
         aria-label='add counter'
-        disabled={!counterName}
+        disabled={!counterName.trim()}
       >
         <FontAwesomeIcon icon={faPlus} />
       </button>
