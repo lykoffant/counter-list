@@ -18,9 +18,10 @@ function AddCounterForm({
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    counterName && addCounter(counterName);
-
-    setCounterName('');
+    if (counterName.length > 0) {
+      addCounter(counterName);
+      setCounterName('');
+    }
   };
 
   return (
