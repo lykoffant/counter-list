@@ -3,18 +3,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import cn from 'classnames';
 
-import styles from './Counter.module.css';
+import styles from './CounterItem.module.css';
 
-import { ICounterProps } from './Counter.props';
+import { ICounterItemProps } from './CounterItem.props';
 
-function Counter({
+function CounterItem({
   className,
   counter,
   deleteCounter,
   incCounterValue,
   decCounterValue,
   ...props
-}: ICounterProps) {
+}: ICounterItemProps) {
   return (
     <li className={cn(className, styles['parent'])} {...props}>
       <span className={styles['name']}>{counter.name}</span>
@@ -54,4 +54,4 @@ function Counter({
   );
 }
 
-export { Counter };
+export { CounterItem };

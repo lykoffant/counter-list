@@ -1,23 +1,23 @@
 import cn from 'classnames';
 
-import styles from './Counters.module.css';
+import styles from './CounterList.module.css';
 
-import { ICountersProps } from './Counters.props';
+import { ICounterListProps } from './CounterList.props';
 
-import { Counter } from '../Counter/Counter';
+import { CounterItem } from '../CounterItem/CounterItem';
 
-function Counters({
+function CounterList({
   className,
   counters,
   deleteCounter,
   incCounterValue,
   decCounterValue,
   ...props
-}: ICountersProps) {
+}: ICounterListProps) {
   return (
     <ul className={cn(className, styles['parent'])} {...props}>
       {counters.map((counter) => (
-        <Counter
+        <CounterItem
           key={counter.id}
           className={styles['counter']}
           counter={counter}
@@ -30,4 +30,4 @@ function Counters({
   );
 }
 
-export { Counters };
+export { CounterList };

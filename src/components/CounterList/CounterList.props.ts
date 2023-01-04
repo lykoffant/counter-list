@@ -2,7 +2,7 @@ import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 import { CounterId, ICounter } from '../../models/counter.models';
 
-export interface ICountersProps
+export interface ICounterListProps
   extends DetailedHTMLProps<
     HTMLAttributes<HTMLUListElement>,
     HTMLUListElement

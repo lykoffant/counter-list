@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import styles from './App.module.css';
 
-import { AddCounterForm, Counters } from './components';
+import { AddCounterForm, CounterList } from './components';
 
 import { CounterId, ICounter } from './models/counter.models';
 
@@ -38,7 +38,7 @@ function App() {
       <div className={styles['container']}>
         <h1 className={styles['title']}>Counter List</h1>
         <AddCounterForm className={styles['form']} addCounter={addCounter} />
-        <Counters
+        <CounterList
           className={styles['list']}
           counters={counters}
           deleteCounter={deleteCounter}

@@ -1,2 +1,2 @@
 export * from './AddCounterForm/AddCounterForm';
-export * from './Counters/Counters';
+export * from './CounterList/CounterList';
