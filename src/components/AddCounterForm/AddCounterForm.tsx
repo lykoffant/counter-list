@@ -6,14 +6,17 @@ import cn from 'classnames';
 import { FormEvent, useState } from 'react';
 
 import styles from './AddCounterForm.module.css';
+
 import { IAddCounterFormProps } from './AddCounterForm.props';
+
+import { ICounter } from '../../models/counter.models';
 
 function AddCounterForm({
   className,
   addCounter,
   ...props
 }: IAddCounterFormProps) {
-  const [counterName, setCounterName] = useState<string>('');
+  const [counterName, setCounterName] = useState<ICounter['name']>('');
 
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
