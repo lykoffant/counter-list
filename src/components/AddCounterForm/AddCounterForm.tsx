@@ -18,12 +18,7 @@ function AddCounterForm({
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    counterName &&
-      addCounter({
-        id: Date.now(),
-        name: counterName,
-        value: 0,
-      });
+    counterName && addCounter(counterName);
 
     setCounterName('');
   };

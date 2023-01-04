@@ -7,5 +7,5 @@ export interface IAddCounterFormProps
     FormHTMLAttributes<HTMLFormElement>,
     HTMLFormElement
   > {
-  addCounter: (counter: ICounter) => void;
+  addCounter: (name: ICounter['name']) => void;
 }
