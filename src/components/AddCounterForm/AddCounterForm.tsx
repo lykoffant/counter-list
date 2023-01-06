@@ -21,8 +21,10 @@ function AddCounterForm({
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (counterName.trim().length > 0) {
-      addCounter(counterName);
+    const clearedCounterName = counterName.trim().replace(/\s{2,}/g, ' ');
+
+    if (clearedCounterName) {
+      addCounter(clearedCounterName);
       setCounterName('');
     }
   };
