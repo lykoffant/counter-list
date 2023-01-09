@@ -1,3 +1,5 @@
+import GithubCorner from 'react-github-corner';
+
 import styles from './App.module.css';
 
 import { AddCounterForm, CounterList } from './components';
@@ -26,6 +28,10 @@ function App() {
           decCounterValue={decCounterValue}
         />
       </div>
+      <GithubCorner
+        href='https://github.com/lykoffant/counter-list'
+        size={60}
+      />
     </main>
   );
 }
