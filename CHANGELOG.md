@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/lykoffant/counter-list/compare/v1.0.0...v1.1.0) (2023-02-02)
+
+
+### Features
+
+* sync localStorage and the state of counters ([5175933](https://github.com/lykoffant/counter-list/commit/517593389f7b50990a4543d04452e6f074558a0f))
+
 ## 1.0.0 (2023-01-11)
 
 
