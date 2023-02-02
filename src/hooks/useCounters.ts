@@ -1,9 +1,29 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { ICounter } from '../models/counter.models';
 
-function useCounters(initialCounters: ICounter[]) {
-  const [counters, setCounters] = useState<ICounter[]>(initialCounters);
+function getInitialCounters(key: string): ICounter[] {
+  const countersFromLocalStorage = localStorage.getItem(key);
+
+  if (countersFromLocalStorage) {
+    return JSON.parse(countersFromLocalStorage) as ICounter[];
+  }
+
+  const initialCounters: ICounter[] = [];
+  localStorage.setItem(key, JSON.stringify(initialCounters));
+  return initialCounters;
+}
+
+function useCounters() {
+  const countersKey = 'counters';
+  const [counters, setCounters] = useState<ICounter[]>(
+    getInitialCounters(countersKey),
+  );
+
+  useEffect(
+    () => localStorage.setItem(countersKey, JSON.stringify(counters)),
+    [counters],
+  );
 
   const addCounter = (name: ICounter['name']) => {
     const counter = {

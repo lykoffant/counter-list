@@ -13,7 +13,7 @@ function App() {
     deleteCounter,
     incCounterValue,
     decCounterValue,
-  } = useCounters([]);
+  } = useCounters();
 
   return (
     <main className={styles['parent']}>
