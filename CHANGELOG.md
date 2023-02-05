@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/lykoffant/counter-list/compare/v1.1.0...v1.1.1) (2023-02-05)
+
+
+### Bug Fixes
+
+* add a favicon ([b20a280](https://github.com/lykoffant/counter-list/commit/b20a280bcb1a71a54a2a071c8939dd2f19831315))
+
 ## [1.1.0](https://github.com/lykoffant/counter-list/compare/v1.0.0...v1.1.0) (2023-02-02)
 
 
